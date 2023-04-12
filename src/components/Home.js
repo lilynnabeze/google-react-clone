@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState} from "react";
 import Logo from "./images/GoogleLogo.png";
+import SearchBar from "./SearchBar";
+
 
 const Home = () => {
+  const [search, setSearch] = useState("");
+
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      setSearch(event.target.value);
+    };
+    if (event.key === 'Backspace') {
+      setSearch(event.target.value)
+    }
+};
   return (
     <div className="home">
       <img src={Logo} alt="Google logo" />
@@ -54,8 +66,9 @@ const Home = () => {
             ></path>
           </g>
         </svg>
-        <input type="text" />
+        <SearchBar onKeyDown={handleKeyDown}/>
       </div>
+      <p>{search}</p>
       <div className="btn">
         <button>Google Search</button>
         <button>I'm Feeling Lucky</button>
