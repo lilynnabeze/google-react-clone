@@ -31,8 +31,8 @@ const Avatar = () => {
 const Header = () => {
   return (
     <div className="header">
-      <Links link={"#"} title={"Gmail"} />
-      <Links link={"#"} title={"Images"} />
+      <Links link={""} title={"Gmail"} />
+      <Links link={""} title={"Images"} />
       <MenuIcon />
       <Avatar />
     </div>
