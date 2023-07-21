@@ -1,4 +1,5 @@
 import React from "react";
+import image from "./assets/avatar.png"
 
 const Links = (props) => {
   return (
@@ -20,7 +21,7 @@ const Avatar = () => {
   return (
     <div>
       <img
-        src="https://lh3.googleusercontent.com/ogw/AAEL6sjr4yyFwZcQxpooKTEa5H-CPLkOHy2zn6dXFNUJ=s32-c-mo"
+        src= {image}
         alt="Avatar"
       />
     </div>
