@@ -1,7 +1,6 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Logo from "./images/GoogleLogo.png";
 import SearchBar from "./SearchBar";
-
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -9,11 +8,11 @@ const Home = () => {
   function handleKeyDown(event) {
     if (event.key === "Enter") {
       setSearch(event.target.value);
-    };
-    if (event.key === 'Backspace') {
-      setSearch(event.target.value)
     }
-};
+    if (event.key === "Backspace") {
+      setSearch(event.target.value);
+    }
+  }
   return (
     <div className="home">
       <img src={Logo} alt="Google logo" />
@@ -66,7 +65,7 @@ const Home = () => {
             ></path>
           </g>
         </svg>
-        <SearchBar onKeyDown={handleKeyDown}/>
+        <SearchBar onKeyDown={handleKeyDown} />
       </div>
       <p>{search}</p>
       <div className="btn">
@@ -78,22 +77,42 @@ const Home = () => {
         <p className="languages-offering">Google offered in:</p>
         <ul className="languages">
           <li>
-            <a href="https://www.britannica.com/topic/Hausa-language" target="_blank"  rel="noreferrer" className="language">
+            <a
+              href="https://www.britannica.com/topic/Hausa-language"
+              target="_blank"
+              rel="noreferrer"
+              className="language"
+            >
               Hausa
             </a>
           </li>
           <li>
-            <a href="https://en.wikipedia.org/wiki/Igbo_language" target="_blank"  rel="noreferrer" className="language">
+            <a
+              href="https://en.wikipedia.org/wiki/Igbo_language"
+              target="_blank"
+              rel="noreferrer"
+              className="language"
+            >
               Igbo
             </a>
           </li>
           <li>
-            <a href="https://en.wikipedia.org/wiki/Yoruba_language" target="_blank"  rel="noreferrer" className="language">
+            <a
+              href="https://en.wikipedia.org/wiki/Yoruba_language"
+              target="_blank"
+              rel="noreferrer"
+              className="language"
+            >
               Èdè Yorùbá
             </a>
           </li>
           <li>
-            <a href="https://www.britannica.com/topic/pidgin" target="_blank"  rel="noreferrer" className="language">
+            <a
+              href="https://www.britannica.com/topic/pidgin"
+              target="_blank"
+              rel="noreferrer"
+              className="language"
+            >
               Nigerian Pidgin
             </a>
           </li>
@@ -104,5 +123,3 @@ const Home = () => {
 };
 
 export default Home;
-
-

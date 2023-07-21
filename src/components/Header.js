@@ -1,5 +1,5 @@
 import React from "react";
-import image from "./assets/avatar.png"
+import image from "./assets/avatar.png";
 
 const Links = (props) => {
   return (
@@ -20,10 +20,7 @@ const MenuIcon = () => {
 const Avatar = () => {
   return (
     <div>
-      <img
-        src= {image}
-        alt="Avatar"
-      />
+      <img src={image} alt="Avatar" />
     </div>
   );
 };
